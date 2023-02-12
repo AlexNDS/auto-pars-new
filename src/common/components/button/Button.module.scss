@@ -1,0 +1,24 @@
+@import '../../../common/styles/sass/variables.scss';
+@import '../../../common/styles/sass/mixins.scss';
+
+.btn {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: none;
+  text-decoration: none;
+  line-height: 14px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 14px;
+  border-color: transparent;
+  padding: 15px 35px;
+  border-radius: 30px;
+  opacity: 1;
+  border-width: 0;
+  border-style: none;
+  @include text(1.25rem, #222222FF, uppercase);
+
+  &:hover {
+    @include text(1.5rem, #222222FF, uppercase);
+  }
+}

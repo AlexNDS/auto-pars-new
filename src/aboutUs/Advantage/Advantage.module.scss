@@ -1,0 +1,57 @@
+@import '../../common/styles/sass/variables.scss';
+@import '../../common/styles/sass/mixins.scss';
+@import '../../common/components/button/Button.module';
+
+.advantage {
+  width: 30%;
+  height: 400px;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 15px;
+  font-family: "Lato", Roboto, sans-serif;
+  font-size: 16px;
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include text(16px, $titleTextColor, uppercase);
+
+    &::before {
+      background-image: url("../../accets/images/two.jpg");
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      content: '';
+      background-color: $primaryColor;
+      opacity: 0.3;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .description {
+      font-weight: 300;
+      text-transform: none;
+      display: block;
+      width: 80%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      @include text(16px, $titleTextColor, none);
+    }
+  }
+}
+
+
+p {
+  @include text(16px, #ffffff, uppercase);
+  text-align: center;
+  font-weight: 400;
+  z-index: 998;
+}

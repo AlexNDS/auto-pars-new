@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+@mixin text($fontSize, $color, $textTransform) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $color;
+  text-transform: $textTransform;
+}
+
+@mixin afterBlock() {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -25px;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #fff;
+}
