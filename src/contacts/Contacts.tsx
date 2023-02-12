@@ -1,29 +1,32 @@
 import React, {useState} from 'react';
 import style from './Contacts.module.scss'
 import {useFormik} from "formik";
-// import axios from "axios";
+import axios from "axios";
 
 const Contacts = () => {
     const [isSendMessage, setIsSendMessage] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const formik = useFormik({
         initialValues: {
             name: '',
             phone: '',
             email: '',
-            website: '',
-            message: ''
+            vinFrame: '',
+            sparePartName: ''
         },
         onSubmit: (values) => {
-            // axios.post("https://gmail-node-js.vercel.app/sendMessage", {
-            //     name: values.name,
-            //     phone: values.phone,
-            //     email: values.email,
-            //     website: values.website,
-            //     message: values.message
-            // })
-            //     .then(() => {
-            //         setIsSendMessage(true)
-            //     })
+            setIsLoading(true)
+            axios.post("https://mail-node-js.vercel.app/sendMessage", {
+                name: values.name,
+                phone: values.phone,
+                email: values.email,
+                vinFrame: values.vinFrame,
+                sparePartName: values.sparePartName
+            })
+                .then(() => {
+                    setIsSendMessage(true)
+                    setIsLoading(false)
+                })
         }
     });
 
@@ -49,11 +52,11 @@ const Contacts = () => {
                                     <input className={style.input} placeholder={'Email'}
                                            type="email" {...formik.getFieldProps("email")}/>
                                     <input className={style.input}
-                                           placeholder={'VIN/Frame'} {...formik.getFieldProps("website")}/>
+                                           placeholder={'VIN/Frame'} {...formik.getFieldProps("vinFrame")}/>
                                 </div>
                                 <textarea className={style.textarea}
-                                          placeholder={'Название запчасти'} {...formik.getFieldProps("message")}/>
-                                <button type="submit">Отправить запрос</button>
+                                          placeholder={'Название запчасти'} {...formik.getFieldProps("sparePartName")}/>
+                                <button type="submit" disabled={isLoading}>Отправить запрос</button>
                             </form>
                         }
                     </div>

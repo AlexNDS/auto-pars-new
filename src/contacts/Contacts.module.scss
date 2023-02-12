@@ -60,8 +60,20 @@
         @include text(2rem, #222, none);
       }
       .isSendMessage button {
-        @extend .btn;
-        background-color: rgba(255, 255, 255, 0.1);
+          @extend .btn;
+          border: 1px solid #222;
+          @include text(12px, #222, uppercase);
+          background-color: transparent;
+          cursor: pointer;
+          font-weight: 400;
+          letter-spacing: .2em;
+          @media screen and (max-width: 400px) {
+            margin: 0 0 20px 0;
+          }
+          &:hover {
+            @include text(12px, #fff, uppercase);
+            background-color: #222;
+          }
       }
       .form {
         position: relative;
@@ -124,6 +136,11 @@
           &:hover {
             @include text(12px, #fff, uppercase);
             background-color: #222;
+          }
+          &:disabled{
+            border: 1px solid rgba(34, 34, 34, 0.51);
+            @include text(12px, #22222283, uppercase);
+            background-color: transparent;
           }
         }
       }
