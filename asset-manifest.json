@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/auto-pars/static/css/main.c5cfc446.css",
+    "main.js": "/auto-pars/static/js/main.50d39ecc.js",
+    "static/js/787.85379231.chunk.js": "/auto-pars/static/js/787.85379231.chunk.js",
+    "static/media/three.jpg": "/auto-pars/static/media/three.0d017b4b6883f8fa933c.jpg",
+    "static/media/main.jpg": "/auto-pars/static/media/main.d72a65efafa854948b88.jpg",
+    "static/media/one.jpg": "/auto-pars/static/media/one.d72a65efafa854948b88.jpg",
+    "static/media/two.jpg": "/auto-pars/static/media/two.95e01d68c1bdfc712896.jpg",
+    "static/media/bg01.svg": "/auto-pars/static/media/bg01.e4c00741d002f1c68ad5.svg",
+    "static/media/viber.svg": "/auto-pars/static/media/viber.b636905be006f7339ab13de19c4ba02b.svg",
+    "static/media/vk.svg": "/auto-pars/static/media/vk.65da713fc02319f9a7f7087a2e87e808.svg",
+    "index.html": "/auto-pars/index.html",
+    "static/media/whatsapp.svg": "/auto-pars/static/media/whatsapp.17fa84081b9bf28fab8feef8a70624f1.svg",
+    "static/media/telegram.svg": "/auto-pars/static/media/telegram.240a821d8516c0c8be7bcf490dee9353.svg",
+    "main.c5cfc446.css.map": "/auto-pars/static/css/main.c5cfc446.css.map",
+    "main.50d39ecc.js.map": "/auto-pars/static/js/main.50d39ecc.js.map",
+    "787.85379231.chunk.js.map": "/auto-pars/static/js/787.85379231.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5cfc446.css",
+    "static/js/main.50d39ecc.js"
+  ]
+}
