@@ -11,31 +11,60 @@
   box-sizing: border-box;
   line-height: 1.8;
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    height: 600px;
+  }
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    height: 650px;
+  }
+
   .img {
     width: 50%;
     height: 100%;
     display: inline-block;
     object-fit: cover;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      height: 50%;
+    }
   }
 
   .columnTwo{
     padding: 60px;
     text-align: left;
+    @media screen and (max-width: 930px) {
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 10px;
+    }
 
     h3 {
-      @include text(14px, #ffffff, uppercase);
-      font-size: 20px;
+      @include text(20px, #ffffff, uppercase);
       font-weight: 800;
       margin-bottom: 30px;
       text-align: left;
+
+      @media screen and (max-width: 1022px) {
+        @include text(16px, #ffffff, uppercase);
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
     }
     .description {
       text-align: left;
       font-weight: 300;
       font-style: normal;
-      font-size: 16px;
-      color: #ffffff;
       letter-spacing: 0.05em;
+      @include text(16px, #ffffff, none);
+
+      @media screen and (max-width: 1100px) {
+        @include text(14px, #ffffff, none);
+      }
     }
   }
 

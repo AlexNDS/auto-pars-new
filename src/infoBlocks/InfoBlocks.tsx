@@ -29,7 +29,7 @@ export const InfoBlocks = () => {
     return (
         <div className={style.infoBlocks} id="infoBlocks">
             <div className={style.infoBlocksContainer}>
-                <Title color={'#2c3e50'}
+                <Title
                        titlePartOne={'на ваш автомобиль'}
                        titlePartTwo={'подберём любые запчасти и тех. жидкости'}
                 />

@@ -2,7 +2,7 @@
 @import '../common/styles/sass/mixins.scss';
 
 .aboutUsBlock {
-  background: $bgSecondColor;
+  background-image: url("../accets/images/bg01.svg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  padding: 20px 0;
 
   .mainInfo{
     padding-bottom: 80px;
@@ -29,6 +30,10 @@
       letter-spacing: .05em;
       max-width: 920px;
       margin: 0 auto;
+
+      @media screen and (max-width: 900px) {
+        @include text(26px, #444444, none);
+      }
     }
   }
 
@@ -46,10 +51,12 @@
       @media screen and (max-width: 1050px) {
         justify-content: center;
       }
+
+      @media screen and (max-width: 870px) {
+        flex-direction: column;
+       align-items: center;
+      }
     }
-  }
-  &::after {
-    @include afterBlock();
   }
 }
 

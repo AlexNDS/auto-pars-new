@@ -1,0 +1,140 @@
+@import '../common/styles/sass/variables.scss';
+@import '../common/styles/sass/mixins.scss';
+@import '../common/components/button/Button.module';
+
+.contactsBlock {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 100px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 932px) {
+    padding: 50px;
+  }
+
+  @media screen and (max-width: 527px) {
+    padding: 30px;
+  }
+
+  .contactsContainer {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+
+    @media screen and (max-width: 667px) {
+      width: 100%;
+    }
+
+    h5{
+      @include text(48px, #222, uppercase);
+      line-height: 1.3;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin: 0 0 40px 0;
+
+      @media screen and (max-width: 1204px) {
+        @include text(40px, #222, uppercase);
+      }
+      @media screen and (max-width: 1035px) {
+        @include text(35px, #222, uppercase);
+      }
+
+
+      b {
+        font-weight: 900;
+      }
+    }
+
+    .container {
+      width:  100%;
+      text-align: center;
+
+      .isSendMessage p{
+        position: relative;
+        @include text(2rem, #222, none);
+      }
+      .isSendMessage button {
+        @extend .btn;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .form {
+        position: relative;
+        width: 100%;
+
+        .inputsLine {
+          padding-bottom: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
+          @media screen and (max-width: 1090px) {
+            flex-direction: column;
+            padding-bottom: 0;
+          }
+
+          .input {
+            width: 45%;
+            height: auto;
+            border: 1px solid #ddd;
+            background-color: transparent;
+            padding: 10px 15px;
+            @include text(16px, #222, none);
+
+            @media screen and (max-width: 1090px) {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+
+        .textarea {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 15px;
+          height: 150px;
+          width: 100%;
+          border: 1px solid #ddd;
+          background-color: transparent;
+          margin-bottom: 25px;
+          @include text(16px, #222, none);
+        }
+
+        button[type="submit"]{
+          @extend .btn;
+          border: 1px solid #222;
+          @include text(12px, #222, uppercase);
+          background-color: transparent;
+          cursor: pointer;
+          font-weight: 400;
+          letter-spacing: .2em;
+          @media screen and (max-width: 400px) {
+            margin: 0 0 20px 0;
+          }
+          &:hover {
+            @include text(12px, #fff, uppercase);
+            background-color: #222;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

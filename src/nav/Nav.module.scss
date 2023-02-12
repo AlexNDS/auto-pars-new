@@ -1,0 +1,89 @@
+@import '../common/styles/sass/variables.scss';
+@import '../common/styles/sass/mixins.scss';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+  padding-left: 50px;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+    position: fixed;
+    width: 90%;
+    top: 20px;
+    left: 15px;
+    margin: 0;
+    padding: 0;
+    min-height: 80px;
+    background: #fff;
+    z-index: 99999;
+  }
+
+  p {
+    @include text(25px, #222, uppercase);
+    padding-right: 35px;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  a {
+    @include text(14px, #222, uppercase);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding: 25px 15px 25px 15px;
+    cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+      padding: 0;
+    }
+
+    &:hover {
+      color: #aaa;
+    }
+  }
+
+  .active {
+    color: #aaa;
+  }
+
+  .navTrigger {
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+    float: right;
+
+    .burgerMenuIcon {
+      display: none;
+      width: 100%;
+      height: 100%;
+      @media screen and (max-width: 900px) {
+        display: inline-block;
+      }
+    }
+
+    .burgerMenuIcon.openMenu {
+      display: none;
+    }
+
+    .closeIcon {
+      display: none;
+    }
+
+
+    .closeIcon.closeMenu {
+      width: 80%;
+      height: 80%;
+      display: inline-block;
+    }
+  }
+}
+

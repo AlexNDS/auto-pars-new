@@ -11,21 +11,31 @@
     text-align: center;
 
     h2{
-      @include text(80px, $textColor, uppercase);
-      color: rgb(238, 238, 238);
+      @include text(80px, #EEEEEEFF, uppercase);
       line-height: 1;
       text-align: center;
       font-weight: 800;
       margin: 0;
+
+      @media screen and (max-width: 1025px) {
+        @include text(60px, #EEEEEEFF, uppercase);
+      }
+      @media screen and (max-width: 767px) {
+        @include text(50px, #EEEEEEFF, uppercase);
+      }
     }
 
     h3{
-      @include text(16px, black, uppercase);
+      @include text(16px, #222, uppercase);
       line-height: 1;
       text-align: center;
       font-weight: 400;
       letter-spacing: 1em;
       margin: 0;
+
+      @media screen and (max-width: 1025px) {
+        @include text(14px, #222, uppercase);
+      }
     }
   }
 }
