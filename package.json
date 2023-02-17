@@ -2,7 +2,7 @@
   "name": "auto-pars",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://LyudmilaShch.github.io/auto-pars",
+  "homepage": "https://AlexNDS.github.io/auto-pars-new",
   "dependencies": {
     "@mui/styled-engine-sc": "^5.11.0",
     "@pbe/react-yandex-maps": "^1.2.2",
