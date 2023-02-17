@@ -37,8 +37,7 @@ const Contacts = () => {
                     <div className={style.container}>
                         {isSendMessage
                             ? <div className={style.isSendMessage}>
-                                <p>Thanks. Your message ha been sent. I will contacts you
-                                    shortly</p>
+                                <p>Спасибо за ваш запрос. Я свяжусь с вами в ближайшее время</p>
                                 <button onClick={()=>{setIsSendMessage(false)}}>Ok</button>
                             </div>
                             : <form className={style.form} id="contacts-form" onSubmit={formik.handleSubmit}>
